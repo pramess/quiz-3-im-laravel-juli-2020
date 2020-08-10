@@ -14,7 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/master', function () {
+    return view('layouts.master1');
+});
 Route::get('/items/create', 'ItemController@create'); // menampilkan halaman form
 Route::post('/items', 'ItemController@store'); // menyimpan data
 Route::get('/items', 'ItemController@index'); // menampilkan semua
